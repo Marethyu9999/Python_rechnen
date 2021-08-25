@@ -11,7 +11,7 @@ def zylinderrechnung():
     durchmesser_aus_radius = radius*2
     grundfläche_aus_radius = radius**2*pi
     mantelfläche_aus_radius = 2*pi*radius*höhe
-    oberfläche_aus_radius_höhe = 2*pi*radius*(radius*höhe)
+    oberfläche_aus_radius_höhe = 2*pi*radius*(radius+höhe)
     umfang_aus_radius = 2*pi*radius
     volumen_aus_radius_höhe = pi*radius**2*höhe
 
@@ -36,6 +36,14 @@ def zylinderrechnung():
         oberfläche = oberfläche_aus_radius_höhe
         umfang = umfang_aus_radius
         volumen = volumen_aus_radius_höhe
+    elif choice == 17: #Radius + Oberfläche
+        radius = float(input("Radius: "))
+        oberfläche = float(input("Oberfläche: "))
+        höhe = (oberfläche-radius)/radius/pi/2
+        durchmesser = durchmesser_aus_radius
+        grundfläche = grundfläche_aus_radius
+        mantelfläche = mantelfläche_aus_radius
+        volumen = volumen_aus_radius_höhe
     elif choice == 34:  # Höhe + Umfang
         höhe = float(input("Höhe: "))
         umfang = float(input("Umfang: "))
@@ -45,6 +53,8 @@ def zylinderrechnung():
         mantelfläche = mantelfläche_aus_radius
         oberfläche =oberfläche_aus_radius_höhe
         volumen = volumen_aus_radius_höhe
+
+    print("Ergebnis:\nRadius: " + str(radius),"\nHöhe: " + str(höhe),"\nDurchmesser" + str(durchmesser),"\nUmfang: " + str(umfang),"\nGrundfläche: " + str(grundfläche),"\nMantelfläche: " + str(mantelfläche),"\nOberfläche: " + str(oberfläche),"\nVolumem: " + str(volumen))
 
 
 zylinderrechnung()
