@@ -38,7 +38,7 @@ def zylinderrechnung():
     elif choice == 18: #Radius + Volumen
         radius = float(input("Radius: "))
         volumen = float(input("Volumen: "))
-        höhe = volumen/sqrt(radius)/pi
+        höhe = volumen/(radius**2*pi)
         durchmesser = radius*2
         umfang = 2*pi*radius
         grundfläche = radius**2*pi
@@ -75,7 +75,7 @@ def zylinderrechnung():
     elif choice == 26: #Höhe + Mantelfläche
         höhe = float(input("Höhe: "))
         mantelfläche = float(input("Mantelfläche: "))
-        radius = höhe/2
+        radius = mantelfläche/(2*pi*höhe)
         durchmesser = radius*2
         umfang = 2*pi*radius
         grundfläche = radius**2*pi
