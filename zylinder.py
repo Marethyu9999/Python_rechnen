@@ -162,6 +162,15 @@ def zylinderrechnung():
         umfang = 2*pi*radius
         oberfläche = 2*pi*radius*(radius+höhe)
         volumen = pi*radius**2*höhe
+    elif choice == 57: #Grundfläche + Oberfläche
+        grundfläche = float(input("Grundfläche: "))
+        oberfläche = float(input("Oberfläche: "))
+        radius = sqrt(grundfläche/pi)
+        höhe = oberfläche/2/pi/radius-radius
+        durchmesser = radius*2
+        umfang = 2*pi*radius
+        mantelfläche = 2*pi*radius*höhe
+        volumen = pi*radius**2*höhe
 
 
     else:
