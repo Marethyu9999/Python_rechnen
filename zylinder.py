@@ -120,6 +120,13 @@ def zylinderrechnung():
     elif choice == 38: #Durchmesser + Volumen
         durchmesser = float(input("Durchmesser: "))
         volumen = float(input("Volumen: "))
+        radius = durchmesser/2
+        höhe = volumen/pi/sqrt(radius)
+        umfang = 2*pi*radius
+        grundfläche = radius**2*pi
+        mantelfläche = 2*pi*radius*höhe
+        oberfläche = 2*pi*radius*(radius+höhe)
+
 
     else:
         print("Der eingesetzte Code ist nicht zulässig oder wird noch nicht unterstützt.")
