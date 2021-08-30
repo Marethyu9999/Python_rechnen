@@ -171,10 +171,22 @@ def zylinderrechnung():
         umfang = 2*pi*radius
         mantelfläche = 2*pi*radius*höhe
         volumen = pi*radius**2*höhe
+    elif choice == 58: #Grundfläche + Volumen
+        grundfläche = float(input("Grundfläche: "))
+        volumen = float(input("Volumen: "))
+        radius = sqrt(grundfläche/pi)
+        höhe = volumen/grundfläche
+        durchmesser = radius*2
+        umfang = 2*pi*radius
+        mantelfläche = 2*pi*radius*höhe
+        oberfläche = 2*pi*radius*(radius+höhe)
+        volumen = pi*radius**2*höhe
 
 
     else:
         print("Der eingesetzte Code ist nicht zulässig oder wird noch nicht unterstützt.")
+        input("Drücken zum schließen... ")
+        exit()
 
     clear()
     runden_choice = input("Möchten sie runden?(y/n) ")
