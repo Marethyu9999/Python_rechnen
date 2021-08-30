@@ -29,8 +29,9 @@ def zylinderrechnung():
     elif choice == 17: #Radius + Oberfläche
         radius = float(input("Radius: "))
         oberfläche = float(input("Oberfläche: "))
-        höhe = (oberfläche-radius)/radius/pi/2
+        höhe = oberfläche/2/pi/radius-radius
         durchmesser = radius*2
+        umfang = 2*pi*radius
         grundfläche = radius**2*pi
         mantelfläche = 2*pi*radius*höhe
         volumen = pi*radius**2*höhe
@@ -107,6 +108,18 @@ def zylinderrechnung():
         grundfläche = radius**2*pi
         oberfläche = 2*pi*radius*(radius+höhe)
         volumen = pi*radius**2*höhe
+    elif choice == 37: #Durchmesser + Oberfläche
+        durchmesser = float(input("Durchmesser: "))
+        oberfläche = float(input("Oberfläche: "))
+        radius = durchmesser/2
+        höhe = oberfläche/2/pi/radius-radius
+        umfang = 2*pi*radius
+        grundfläche = radius**2*pi
+        mantelfläche = 2*pi*radius*höhe
+        volumen = pi*radius**2*höhe
+    elif choice == 38: #Durchmesser + Volumen
+        durchmesser = float(input("Durchmesser: "))
+        volumen = float(input("Volumen: "))
 
     else:
         print("Der eingesetzte Code ist nicht zulässig oder wird noch nicht unterstützt.")
@@ -124,7 +137,7 @@ def zylinderrechnung():
         oberfläche = round2(oberfläche, runden_stelle)
         volumen = round2(volumen, runden_stelle)
     clear()
-    print("Ergebnis:\nRadius: " + str(radius),"\nHöhe: " + str(höhe),"\nDurchmesser: " + str(durchmesser),"\nUmfang: " + str(umfang),"\nGrundfläche: " + str(grundfläche),"\nMantelfläche: " + str(mantelfläche),"\nOberfläche: " + str(oberfläche),"\nVolumem: " + str(volumen))
+    print("Ergebnis:\nRadius: " + str(radius),"\nHöhe: " + str(höhe),"\nDurchmesser: " + str(durchmesser),"\nUmfang: " + str(umfang),"\nGrundfläche: " + str(grundfläche),"\nMantelfläche: " + str(mantelfläche),"\nOberfläche: " + str(oberfläche),"\nVolumem: " + str(volumen), "\n")
 
 
 zylinderrechnung()
