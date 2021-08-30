@@ -3,7 +3,7 @@ from os import system
 clear = lambda: system('cls')
 from Kreis import kreisberechnung
 
-print("Das hier ist der Launcher für das ganze Project.\nWähle eines der folgenden Optionen indem du die Zahl Schreibst.\n[1] 2D\n[3] 3D")
+print("Das hier ist der Launcher für das ganze Project.\nWähle eines der folgenden Optionen indem du die Zahl Schreibst.\n[1] Formen\n[2] Figuren")
 options_dimensions = float(input("Wahl: "))
 
 if options_dimensions == 1:

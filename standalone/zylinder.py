@@ -3,6 +3,7 @@ def zylinderrechnung():
     from round2 import round2 # round2 ist kein Bänkerrunden sondern normales.
     from os import system
     clear = lambda: system('cls')
+    clear()
 
 
     print("Welche Daten hast du?\n[1] Radius\n[2] Höhe\n[3] Durchmesser\n[4] Umfang\n[5] Grundfläche\n[6] Mantelfläche\n[7] Oberfläche\n[8] Volumen\nZahlen von Werten die sie besitzen nehmen(Von links nach rechts. z.B 12 für Radius + Höhe oder 14 für Radius und Umfang) und sie dann in beschriebener Zahlenform eintragen.")
@@ -219,3 +220,9 @@ def zylinderrechnung():
         volumen = round2(volumen, runden_stelle)
     clear()
     print("Ergebnis:\nRadius: " + str(radius),"\nHöhe: " + str(höhe),"\nDurchmesser: " + str(durchmesser),"\nUmfang: " + str(umfang),"\nGrundfläche: " + str(grundfläche),"\nMantelfläche: " + str(mantelfläche),"\nOberfläche: " + str(oberfläche),"\nVolumem: " + str(volumen), "\n")
+
+    nochmal = str(input("Nochmal? [y/n]: "))
+    while nochmal == "y":
+        zylinderrechnung()
+
+zylinderrechnung()
