@@ -181,7 +181,16 @@ def zylinderrechnung():
         mantelfläche = 2*pi*radius*höhe
         oberfläche = 2*pi*radius*(radius+höhe)
         volumen = pi*radius**2*höhe
-
+    elif choice == 67: #Mantelfläche + Oberfläche
+        mantelfläche = float(input("Mantelfläche: "))
+        oberfläche = float(input("Oberfläche: "))
+        höhe = sqrt(mantelfläche**2/(2*pi*oberfläche-2*pi*mantelfläche))
+        radius = mantelfläche/(2*pi*höhe)
+        durchmesser = radius*2
+        umfang = 2*pi*radius
+        grundfläche = radius**2*pi
+        volumen = pi*radius**2*höhe
+        
 
     else:
         print("Der eingesetzte Code ist nicht zulässig oder wird noch nicht unterstützt.")
