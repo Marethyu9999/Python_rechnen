@@ -18,7 +18,7 @@ def quadratrechnung():
     else:
         print("Antwort nicht gültig")
     
-    print("Ergebnis:\nSeite: " + str(seite), "\nUmfang: " + str(umfang), "\nFläche: " + str(fläche))
+    print(f"Ergebnis:\nSeite: {seite}\nUmfang: {umfang}\nFläche: {fläche}")
 
 
 
