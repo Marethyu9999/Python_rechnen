@@ -1,7 +1,7 @@
 from os import system
 
 clear = lambda: system('cls')
-from Kreis import kreisberechnung
+from kreis import kreisberechnung
 from zylinder import zylinderrechnung
 
 print("Das hier ist der Launcher für das ganze Project.\nWähle eines der folgenden Optionen indem du die Zahl Schreibst.\n[1] Formen\n[2] Figuren")
