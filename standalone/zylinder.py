@@ -1,6 +1,5 @@
-def zylinderrechnung():
+def main():
     from math import pi, sqrt # Hier importiere ich module wie die Zahl pie und Quadratwurzeln
-    from round2 import round2 # round2 ist kein Bänkerrunden sondern normales.
     from os import system
     clear = lambda: system('cls')
     clear()
@@ -207,22 +206,13 @@ def zylinderrechnung():
         exit()
 
     clear()
-    runden_choice = input("Möchten sie runden?(y/n) ")
-    if runden_choice == "y":
-        runden_stelle = int(input("Wie viele Nachkommastellen? "))
-        radius = round2(radius, runden_stelle)
-        höhe = round2(höhe, runden_stelle)
-        durchmesser = round2(durchmesser, runden_stelle)
-        umfang = round2(umfang, runden_stelle)
-        grundfläche = round2(grundfläche, runden_stelle)
-        mantelfläche = round2(mantelfläche, runden_stelle)
-        oberfläche = round2(oberfläche, runden_stelle)
-        volumen = round2(volumen, runden_stelle)
-    clear()
-    print("Ergebnis:\nRadius: " + str(radius),"\nHöhe: " + str(höhe),"\nDurchmesser: " + str(durchmesser),"\nUmfang: " + str(umfang),"\nGrundfläche: " + str(grundfläche),"\nMantelfläche: " + str(mantelfläche),"\nOberfläche: " + str(oberfläche),"\nVolumem: " + str(volumen), "\n")
+    dictornary = {"Radius":radius, "Höhe":höhe, "Durchmesser":durchmesser, "Umfang":umfang, "Grundfläche":grundfläche, "Mantelfläche":mantelfläche, "Oberfläche":oberfläche, "Volumen":volumen}
+    for key, value in dictornary.items():
+        print(f"{key}: {value}")
 
     nochmal = str(input("Nochmal? [y/n]: "))
     while nochmal == "y":
-        zylinderrechnung()
+        main()
 
-zylinderrechnung()
+if __name__ == "__main__":
+    main()
