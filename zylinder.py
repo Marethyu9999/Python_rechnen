@@ -205,4 +205,6 @@ def zylinderrechnung():
         exit()
 
     clear()
-    print(f"Ergebnis:\nRadius: {radius}\nHöhe: {höhe}\nDurchmesser: {durchmesser}\nUmfang: {umfang}\nGrundfläche: {grundfläche}\nMantelfläche: {mantelfläche}\nOberfläche: {oberfläche}\nVolumen: {volumen}")
+    dictornary = {"Radius":radius, "Höhe":höhe, "Durchmesser":durchmesser, "Umfang":umfang, "Grundfläche":grundfläche, "Mantelfläche":mantelfläche, "Oberfläche":oberfläche, "Volumen":volumen}
+    for key, value in dictornary.items():
+        print(f"{key}: {value}")
