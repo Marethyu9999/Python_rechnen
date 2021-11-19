@@ -34,11 +34,6 @@ def kreisberechnung():
   else: 
     print("Diese Antwort ist nicht zulässig.")
 
-  from round2 import round2
-  radius = round2(radius, 2)
-  durchmesser = round2(durchmesser, 2)
-  umfang = round2(umfang, 2)
-  flächeninhalt = round2(flächeninhalt, 2)
-  print("Ergebnis: \nRadius: " + str(radius), "\nDurchmesser: " + str(durchmesser), "\nUmfang: " + str(umfang), "\nFlächeninhalt: " + str(flächeninhalt))
+  print(f"Ergebnis: \nRadius: {radius}\nDurchmesser: {durchmesser}\nUmfang: {umfang}\nFlächeninhalt: {flächeninhalt}")
 
 
