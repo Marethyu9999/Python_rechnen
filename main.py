@@ -19,7 +19,10 @@ elif options_dimensions == 2:
     print("Figuren Wahl:\n[1] Zylinder")
     options_3d = int(input("Wahl: "))
     if options_3d == 1:
-        zylinderrechnung()
+        print("Welche Daten hast du?\n[1] Radius\n[2] Höhe\n[3] Durchmesser\n[4] Umfang\n[5] Grundfläche\n[6] Mantelfläche\n[7] Oberfläche\n[8] Volumen\nZahlen von Werten die sie besitzen nehmen(Von links nach rechts. z.B 12 für Radius + Höhe oder 14 für Radius und Umfang) und sie dann in beschriebener Zahlenform eintragen.")
+        zylinderchoice = int(input("Code: "))
+        for key, value in zylinderrechnung(zylinderchoice).items():
+            print(f"{key}: {value}")
 
 else:
     print("yas")

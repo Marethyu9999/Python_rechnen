@@ -1,11 +1,8 @@
-def zylinderrechnung():
+def zylinderrechnung(choice):
     from math import pi, sqrt # Hier importiere ich module wie die Zahl pie und Quadratwurzeln
     from os import system
     clear = lambda: system('cls')
 
-
-    print("Welche Daten hast du?\n[1] Radius\n[2] Höhe\n[3] Durchmesser\n[4] Umfang\n[5] Grundfläche\n[6] Mantelfläche\n[7] Oberfläche\n[8] Volumen\nZahlen von Werten die sie besitzen nehmen(Von links nach rechts. z.B 12 für Radius + Höhe oder 14 für Radius und Umfang) und sie dann in beschriebener Zahlenform eintragen.")
-    choice = int(input("Code: "))
 
     if choice == 12:  #Radius + Höhe
         radius = float(input("Radius: "))
@@ -205,6 +202,5 @@ def zylinderrechnung():
         exit()
 
     clear()
-    dictornary = {"Radius":radius, "Höhe":höhe, "Durchmesser":durchmesser, "Umfang":umfang, "Grundfläche":grundfläche, "Mantelfläche":mantelfläche, "Oberfläche":oberfläche, "Volumen":volumen}
-    for key, value in dictornary.items():
-        print(f"{key}: {value}")
+    dictionary = {"Radius":radius, "Höhe":höhe, "Durchmesser":durchmesser, "Umfang":umfang, "Grundfläche":grundfläche, "Mantelfläche":mantelfläche, "Oberfläche":oberfläche, "Volumen":volumen}
+    return dictionary
