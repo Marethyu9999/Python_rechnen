@@ -205,4 +205,4 @@ def zylinderrechnung():
         exit()
 
     clear()
-    print("Ergebnis:\nRadius: " + str(radius),"\nHöhe: " + str(höhe),"\nDurchmesser: " + str(durchmesser),"\nUmfang: " + str(umfang),"\nGrundfläche: " + str(grundfläche),"\nMantelfläche: " + str(mantelfläche),"\nOberfläche: " + str(oberfläche),"\nVolumem: " + str(volumen), "\n")
+    print(f"Ergebnis:\nRadius: {radius}\nHöhe: {höhe}\nDurchmesser: {durchmesser}\nUmfang: {umfang}\nGrundfläche: {grundfläche}\nMantelfläche: {mantelfläche}\nOberfläche: {oberfläche}\nVolumen: {volumen}")
