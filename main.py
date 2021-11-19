@@ -1,5 +1,9 @@
 def main():
+    ## Importing modules
     from os import system
+    from colorama import init, Fore, Back, Style
+
+    init(autoreset=True) ## Reseting the colors every time colors are used.
 
     clear = lambda: system('cls')
     from kreis import kreisberechnung
@@ -13,8 +17,10 @@ def main():
         print("[1] Kreis\n[2] Viereck")
         options_2d = float(input("Wahl: "))
         if options_2d == 1:
-            kreisberechnung()
-            input("")
+            kreis_choice = float(input("Wähle eine Option:\n[1] Radius\n[2] Durchmesser\n[3] Umfang\n[4] Flächeninhalt\nWahl: "))
+            kreis_wert = float(input("Wert: "))
+            for key, value in kreisberechnung(kreis_choice, kreis_wert).items():
+                print(f"{key}: {value}")
     elif options_dimensions == 2:
         clear()
         print("Figuren Wahl:\n[1] Zylinder")
