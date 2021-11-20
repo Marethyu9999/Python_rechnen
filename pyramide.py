@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 def pyramiderechnung(choice, wert1, wert2):
     from math import sqrt
 
