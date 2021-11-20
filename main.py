@@ -12,6 +12,8 @@ def main():
     from zylinder import zylinderrechnung
     from pyramide import pyramiderechnung
 
+    clear()
+
     print("Das hier ist der Launcher für das ganze Project.\nWähle eines der folgenden Optionen indem du die Zahl Schreibst.\n[1] Formen\n[2] Figuren")
     options_dimensions = float(input("Wahl: "))
 
