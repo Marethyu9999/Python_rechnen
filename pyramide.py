@@ -123,6 +123,17 @@ def pyramiderechnung(choice, wert1, wert2):
         M = 2*a*ha
         O = (a**2)+2*a*ha
         V = (1/3)*(a**2)*h
+    if choice == 28: # h + M
+        h = wert1
+        M = wert2
+        a = sqrt(sqrt(4*h**4+M**2)-2*h**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        G = a**2
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
 
 
 
