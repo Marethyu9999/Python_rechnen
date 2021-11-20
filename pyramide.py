@@ -233,6 +233,50 @@ def pyramiderechnung(choice, wert1, wert2):
         M = 2*a*ha
         O = (a**2)+2*a*ha
         V = (1/3)*(a**2)*h
+    if choice == 46: # s + u
+        s = wert1
+        u = wert2
+        a = u/4
+        h = sqrt((s**2)-(a**2)/2)
+        ha = sqrt(h**2+((a/2)**2))
+        d = sqrt(a**2+a**2)
+        G = a**2
+        M = 2*a*ha
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
+    if choice == 47: # s + G
+        s = wert1
+        G = wert2
+        a = sqrt(G)
+        h = sqrt((s**2)-(a**2)/2)
+        ha = sqrt(h**2+((a/2)**2))
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        M = 2*a*ha
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
+    if choice == 48: # s + M
+        s = wert1
+        M = wert2
+        a = sqrt(2*(s**2)-sqrt(4*(s**4)-M**2))
+        h = sqrt((s**2)-(a**2)/2)
+        ha = sqrt(h**2+((a/2)**2))
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        G = a**2
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
+    if choice == 49: # s + O
+        s = wert1
+        O = wert2
+        a = sqrt(-sqrt((-O**2)+4*O*(s**2)+4*(s**4))+O+2*(s**2))/sqrt(2)
+        h = sqrt((s**2)-(a**2)/2)
+        ha = sqrt(h**2+((a/2)**2))
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        G = a**2
+        M = 2*a*ha
+        V = (1/3)*(a**2)*h
 
 
     Dictionary = {'a':a, 'h':h, 'ha':ha, 's':s, 'd':d, 'u':u, 'G':G, 'M':M, 'O':O, 'V':V}
