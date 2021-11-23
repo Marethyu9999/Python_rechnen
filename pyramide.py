@@ -277,6 +277,17 @@ def pyramiderechnung(choice, wert1, wert2):
         G = a**2
         M = 2*a*ha
         V = (1/3)*(a**2)*h
+    if choice == 58: # d + M
+        d = wert1
+        M = wert2
+        a = sqrt((d**2)/2)
+        h = sqrt((M/(2*a))**2-(a/2)**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        u = 4*a
+        G = a**2
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
 
 
     Dictionary = {'a':a, 'h':h, 'ha':ha, 's':s, 'd':d, 'u':u, 'G':G, 'M':M, 'O':O, 'V':V}
