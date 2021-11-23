@@ -310,6 +310,95 @@ def pyramiderechnung(choice, wert1, wert2):
         G = a**2
         M = 2*a*ha
         O = (a**2)+2*a*ha
+    elif choice == 68: # u + M
+        u = wert1
+        M = wert2
+        a = u/4
+        h = sqrt((M/(2*a))**2-(a/2)**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        G = a**2
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
+    elif choice == 69: # u + O
+        u = wert1
+        O = wert2
+        a = u/4
+        h = sqrt(((O-a**2)/(2*a))**2-(a/2)**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        G = a**2
+        M = 2*a*ha
+        V = (1/3)*(a**2)*h
+    elif choice == 610: # u + V
+        u = wert1
+        V = wert2
+        a = u/4
+        h = 3*V/a**2
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        G = a**2
+        M = 2*a*ha
+        O = (a**2)+2*a*ha
+    elif choice == 78: # G + M
+        G = wert1
+        M = wert2
+        a = sqrt(G)
+        h = sqrt((M/(2*a))**2-(a/2)**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        O = (a**2)+2*a*ha
+        V = (1/3)*(a**2)*h
+    elif choice == 79: # G + O
+        G = wert1
+        O = wert2
+        a = sqrt(G)
+        h = sqrt(((O-a**2)/(2*a))**2-(a/2)**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        M = 2*a*ha
+        V = (1/3)*(a**2)*h
+    elif choice == 710: # G + V
+        G = wert1
+        V = wert2
+        a = sqrt(G)
+        h = 3*V/a**2
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        M = 2*a*ha
+        O = (a**2)+2*a*ha
+    elif choice == 89: # M + O
+        M = wert1
+        O = wert2
+        a = sqrt(O-M)
+        h = sqrt((M/(2*a))**2-(a/2)**2)
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        G = a**2
+        V = (1/3)*(a**2)*h
+    elif choice == 910: # O + V
+        O = wert1
+        V = wert2
+        a = -1/2*sqrt(O-sqrt(O*(O**3-288*V**2))/O)
+        h = 3*V/a**2
+        ha = sqrt(h**2+((a/2)**2))
+        s = sqrt((h**2)+(a**2)/2)
+        d = sqrt(a**2+a**2)
+        u = 4*a
+        G = a**2
+        M = 2*a*ha
+    
 
 
     Dictionary = {'a':a, 'h':h, 'ha':ha, 's':s, 'd':d, 'u':u, 'G':G, 'M':M, 'O':O, 'V':V}
