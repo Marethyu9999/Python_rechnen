@@ -2,7 +2,6 @@ def main():
     ## Importing modules
     from os import system
     from colorama import init, Fore
-    from termcolor import colored
 
 
     init(autoreset=True) ## Reseting the colors every time colors are used.
