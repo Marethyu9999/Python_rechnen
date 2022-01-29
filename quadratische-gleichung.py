@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 def input_variables():
     # input of variables a,b,c
     a = float(input("a: "))
@@ -16,4 +19,9 @@ def tags(a):
         dir["negativ"] = True
     return dir
 
-
+def visualising(a, b, c):
+    # visualising the graph
+    x = np.linspace(-10, 10, 10000)
+    y = a * x**2 + b * x + c
+    plt.plot(x, y)
+    plt.show()
