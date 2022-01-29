@@ -16,7 +16,7 @@ def tags(a):
     elif a < 0 < 1:
         dir["gestaucht"] = True
     if a < 0:
-        dir["negativ"] = True
+        dir["nach unten geöffnet"] = True
     return dir
 
 def visualising(a, b, c):
@@ -25,3 +25,13 @@ def visualising(a, b, c):
     y = a * x**2 + b * x + c
     plt.plot(x, y)
     plt.show()
+
+def main():
+    # main function
+    a, b, c = input_variables()
+    dir = tags(a)
+    print(dir)
+    visualising(a, b, c)
+
+if __name__ == "__main__":
+    main()
