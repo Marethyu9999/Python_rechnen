@@ -13,3 +13,11 @@ def kegel(code, var1, var2):
         result["Grundfläche G"] = pi * var1**2
         result["Volumen V"] = 1/3 * result["Grundfläche G"] * result["Höhe"]
         result["Oberfläche O"] = result["Mantelfläche M"] + result["Grundfläche G"]
+    if code == 13: # Radius + Seite s
+        result["Radius"] = var1
+        result["Seite s"] = var2
+        result["Höhe"] = sqrt(var2**2 - var1**2)
+        result["Mantelfläche M"] = pi * var1 * result["Seite s"]
+        result["Grundfläche G"] = pi * var1**2
+        result["Volumen V"] = 1/3 * result["Grundfläche G"] * result["Höhe"]
+        result["Oberfläche O"] = result["Mantelfläche M"] + result["Grundfläche G"]
